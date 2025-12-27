@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="006-insert-initial-data" author="dellya">
+
+        <!-- admin | password: adminAdmin -->
+        <insert tableName="users">
+            <column name="username" value="admin"/>
+            <column name="email" value="admin@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$FC91lvbX7oGV2WKtn977xee99oQhMo.Y71x2vEiUy8.qF4B7.wIby"/>
+            <column name="role" value="ROLE_ADMIN"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+        <!-- adel | password: iLikeAFood -->
+        <insert tableName="users">
+            <column name="username" value="adel"/>
+            <column name="email" value="dellya@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$h4qhqtsYxLqtKAYxjGv3V.lTEK5Xk35LX041zyMWct.oGOgwoYzG2"/>
+            <column name="role" value="ROLE_USER"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+        <!-- asel | password: iHateSport -->
+        <insert tableName="users">
+            <column name="username" value="asel"/>
+            <column name="email" value="asel@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$atT.U4sSJRDp2aLSh5GQQuz6BzLDhES5vM1D3y17pqc0A.WoGOci6"/>
+            <column name="role" value="ROLE_USER"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+        <!-- lera | password: coffeeIsLife -->
+        <insert tableName="users">
+            <column name="username" value="lera"/>
+            <column name="email" value="lera@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$b1mL7Zp2DfYT63neZG3dYucoeMsLea9GHvVZQQrMzMp/OLE6KJaCK"/>
+            <column name="role" value="ROLE_USER"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+        <!-- nastya | password: yogaIsGood -->
+        <insert tableName="users">
+            <column name="username" value="nastya"/>
+            <column name="email" value="nastya@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$RHG2Gt9YuirWThyuqVoOv.f2hUx1oloBfnP3wVaEyZ8e3sSJboVmG"/>
+            <column name="role" value="ROLE_MODERATOR"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+        <!-- ivan | password: booksRead -->
+        <insert tableName="users">
+            <column name="username" value="ivan"/>
+            <column name="email" value="ivan@gmail.com"/>
+            <column name="password"
+                    value="$2a$10$7t29MWNyRqIHwOqtjNbCYegS90Y7vUyFdIaHpRxJEaIDx3N1kD9Ei"/>
+            <column name="role" value="ROLE_USER"/>
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+
+
+        <insert tableName="categories">
+            <column name="name" value="Electronics"/>
+        </insert>
+
+        <insert tableName="categories">
+            <column name="name" value="Home"/>
+        </insert>
+
+        <insert tableName="categories">
+            <column name="name" value="Travel"/>
+        </insert>
+
+        <insert tableName="categories">
+            <column name="name" value="Hobby"/>
+        </insert>
+
+
+        <insert tableName="wish_groups">
+            <column name="title" value="New Year"/>
+            <column name="owner_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="wish_groups">
+            <column name="title" value="Dream Travel"/>
+            <column name="owner_id" valueNumeric="3"/>
+        </insert>
+
+
+        <insert tableName="wishes">
+            <column name="title" value="iPhone 15 Pro"/>
+            <column name="description" value="256GB, new"/>
+            <column name="price" valueNumeric="650000"/>
+            <column name="status" value="PUBLISHED"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="wish_group_id" valueNumeric="1"/>
+        </insert>
+
+        <insert tableName="wishes">
+            <column name="title" value="Trip to Japan"/>
+            <column name="description" value="Tokyo and Kyoto"/>
+            <column name="price" valueNumeric="1200000"/>
+            <column name="status" value="PUBLISHED"/>
+            <column name="owner_id" valueNumeric="3"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="wish_group_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="wishes">
+            <column name="title" value="Coffee Machine"/>
+            <column name="description" value="For home use"/>
+            <column name="price" valueNumeric="280000"/>
+            <column name="status" value="DRAFT"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="category_id" valueNumeric="2"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

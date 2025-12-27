@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-bookings" author="dellya">
+        <createTable tableName="bookings">
+            <column name="id" type="bigserial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="booked_by_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wish_id" type="bigint">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="status" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="bookings"
+                baseColumnNames="booked_by_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                constraintName="fk_bookings_user"/>
+
+        <addForeignKeyConstraint
+                baseTableName="bookings"
+                baseColumnNames="wish_id"
+                referencedTableName="wishes"
+                referencedColumnNames="id"
+                constraintName="fk_bookings_wish"/>
+    </changeSet>
+
+</databaseChangeLog>
