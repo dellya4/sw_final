@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "915428bb-ba58-4b48-8c8a-f94e6c99a147",
+		"name": "Bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49647208",
+		"_collection_link": "https://dellya4-4518350.postman.co/workspace/%25D0%2590%25D0%25B1%25D0%25B4%25D1%2580%25D0%25B0%25D1%2585%25D0%25BC%25D0%25B0%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25B0-%25D0%2590%25D0%25B4%25D0%25B5%25D0%25BB%25D1%258C's-Workspace~42db094a-ef77-4c2d-8092-a7ca0c470c0d/collection/49647208-915428bb-ba58-4b48-8c8a-f94e6c99a147?action=share&source=collection_link&creator=49647208"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"Coffee Machine\",\r\n        \"description\": \"A smart mashine\",\r\n        \"price\": 280000.0,\r\n        \"categoryId\": 2\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/wish/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"wish",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show my",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"Coffee Machine\",\r\n        \"description\": \"A smart mashine\",\r\n        \"price\": 280000.0,\r\n        \"categoryId\": 2\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/my",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bookings/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete (own user)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "booksRead",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ivan@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/groups/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"groups",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

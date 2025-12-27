@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "ca12147b-5d64-43bc-ab65-089d18e66ff0",
+		"name": "Groups",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49647208",
+		"_collection_link": "https://dellya4-4518350.postman.co/workspace/%25D0%2590%25D0%25B1%25D0%25B4%25D1%2580%25D0%25B0%25D1%2585%25D0%25BC%25D0%25B0%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25B0-%25D0%2590%25D0%25B4%25D0%25B5%25D0%25BB%25D1%258C's-Workspace~42db094a-ef77-4c2d-8092-a7ca0c470c0d/collection/49647208-ca12147b-5d64-43bc-ab65-089d18e66ff0?action=share&source=collection_link&creator=49647208"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "booksRead",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ivan@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show my",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "iLikeAFood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dellya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/groups/my",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"groups",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete (own user)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "iLikeAFood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dellya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/groups/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"groups",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

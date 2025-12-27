@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "fdba9c67-b525-4a45-bab4-10e2748945cf",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49647208",
+		"_collection_link": "https://dellya4-4518350.postman.co/workspace/%25D0%2590%25D0%25B1%25D0%25B4%25D1%2580%25D0%25B0%25D1%2585%25D0%25BC%25D0%25B0%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25B0-%25D0%2590%25D0%25B4%25D0%25B5%25D0%25BB%25D1%258C's-Workspace~42db094a-ef77-4c2d-8092-a7ca0c470c0d/collection/49647208-fdba9c67-b525-4a45-bab4-10e2748945cf?action=share&source=collection_link&creator=49647208"
+	},
+	"item": [
+		{
+			"name": "show all wishes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "adminAdmin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Laptop Asus TUF Gaming F16\",\r\n  \"description\": \"Gaming laptop is my dreaming!\",\r\n  \"price\": 615990,\r\n  \"categoryId\": 1\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/wishes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"wishes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show by id (moder)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/wishes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"wishes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show by id (not admin)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ivan@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "booksRead",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/wishes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"wishes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all users (user)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ivan@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "booksRead",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block user (moder)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block user (admin)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yogaIsGood",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nastya@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/users/7/block",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"7",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block user (admin)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "adminAdmin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"A man day\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/users/7/block",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"7",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete wish (admin)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "adminAdmin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Laptop Asus TUF Gaming F16\",\r\n  \"description\": \"Gaming laptop is my dreaming!\",\r\n  \"price\": 615990,\r\n  \"categoryId\": 1\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/wishes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"wishes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
