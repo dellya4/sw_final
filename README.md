@@ -136,7 +136,7 @@ Spring Security is used.
 
 ---
 
-## Статусы
+## Status
 
 ### WishStatus
 - DRAFT — draft  
